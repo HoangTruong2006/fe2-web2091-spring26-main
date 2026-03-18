@@ -5,6 +5,7 @@ import ListPage from './pages/ListPage';
 import AddPage from './pages/Register';
 import Bai3 from './pages/bai3';
 import { Lab4 } from './pages/lab4';
+import Lab5 from './pages/lab5';
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
             <Link to="/add" className="hover:text-gray-200">Thêm mới</Link>
             <Link to="/bai3" className="hover:text-gray-200">Bài 3</Link>
             <Link to="/lab4" className="hover:text-gray-200">Lab 4</Link>
+            <Link to="/lab5" className="hover:text-gray-200">Lab 5</Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
@@ -37,6 +39,7 @@ function App() {
         <Route path="/register" element={<AddPage />} />
         <Route path="/bai3" element={<Bai3 />} />
         <Route path="/lab4" element={<Lab4 />} />
+        <Route path="/lab5" element={<Lab5 />} />
       </Routes>
 
       <Toaster position="top-right" />

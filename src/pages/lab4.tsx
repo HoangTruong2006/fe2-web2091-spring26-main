@@ -1,5 +1,5 @@
 import { useMutation, useQuery } from "@tanstack/react-query";
-import { Button, Checkbox, Form, Input, Card, Row, Col, Typography, message, Select, Spin } from "antd";
+import { Button, Checkbox, Form, Input, Card, Row, Col, Typography, message, Select, Spin, DatePicker } from "antd";
 import axios from "axios";
 
 const { Title } = Typography;
@@ -19,6 +19,7 @@ interface StoryFormValues {
   title: string;
   author: string;
   image: string;
+  createdAt: string;
   description: string;
   categoryId: string | number;
 }
@@ -108,7 +109,9 @@ export function StoryForm() {
             notFoundContent={isLoadingCats ? <Spin size="small" /> : "Không có dữ liệu"}
           />
         </Form.Item>
-
+        <Form.Item label="Ngày tạo" name="createdAt" rules={[{ required: true }]}>
+          <DatePicker style={{ width: "100%" }} />
+        </Form.Item>
         <Form.Item label="Link hình ảnh (URL)" name="image">
           <Input placeholder="https://example.com/image.jpg" />
         </Form.Item>
