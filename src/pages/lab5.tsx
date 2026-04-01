@@ -55,9 +55,9 @@ const storyList =()=> {
         title: "Hành động",
         dataIndex: "Action",
         render: (_: any, record: any) =>
-             <button className="bg-red-500 text-white px-2 py-1 rounded" onClick={() => deleteMutation.mutate(record.id)}>
+             <Button danger onClick={() => deleteMutation.mutate(record.id)}>
                Xóa
-             </button>,
+             </Button>,
     }
   ];
  
