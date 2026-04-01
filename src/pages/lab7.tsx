@@ -75,7 +75,7 @@ export default function App() {
   const handleLogin = () => {
     setUser({
       name: "Truong",
-      avatar: "https://api.dicebear.com/7.x/avataaars/svg?seed=Truong"
+      avatar: "https://i.pinimg.com/736x/a3/87/1d/a3871debe7be6eb996a9296f11a897a9.jpg"
     });
   };
 
