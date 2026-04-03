@@ -9,6 +9,7 @@ import Lab7 from './pages/lab7';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import { useAuthStore } from './stores/useAuthStore';
+import StoryManager from './pages/storyManeger';
 
 function App() {
   const { user, logout } = useAuthStore();
@@ -29,6 +30,7 @@ function App() {
             <Link to="/lab4" className="hover:text-gray-200">Lab 4</Link>
             <Link to="/lab5" className="hover:text-gray-200">Lab 5</Link>
             <Link to="/lab7" className="hover:text-gray-200">Lab 7</Link>
+            <Link to="/StoryManager" className="hover:text-gray-200">Quản lý truyện</Link>
           </div>
 
           <div className="hidden md:flex items-center space-x-6">
@@ -68,6 +70,7 @@ function App() {
         <Route path="/lab4" element={<Lab4 />} />
         <Route path="/lab5" element={<Lab5 />} />
         <Route path="/lab7" element={<Lab7 />} />
+        <Route path="/StoryManager" element={<StoryManager />} />
       </Routes>
 
       <Toaster position="top-right" />
