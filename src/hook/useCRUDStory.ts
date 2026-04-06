@@ -45,7 +45,6 @@ export const useCRUDStory = () => {
     onSuccess: () => queryClient.invalidateQueries({ queryKey }),
   });
 
-  // 4. DELETE
   const remove = useMutation({
     mutationFn: async (id: number): Promise<void> => {
       await fetch(`${API_URL}/${id}`, { method: 'DELETE' });
